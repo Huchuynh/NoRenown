@@ -1,0 +1,276 @@
+.notification {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.notification header {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.notification a {
+  font-size: 18px;
+  background: rgba(255, 30, 30,.8);
+  color: #f1f1f1;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.notification a:hover {
+  background: rgba(255, 30, 30,1);
+}
+
+#my-orders {
+  max-width: 1200px;
+  width: 100%;
+  color: white;
+  padding: 50px 0 0;
+}
+
+.my-orders-header {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.list-orders {
+  min-height: 300px;
+}
+
+/* width */
+.list-orders::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.list-orders::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+.list-orders::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+.list-orders::-webkit-scrollbar-thumb:hover {
+  background: #ff1e1e;
+}
+
+.order {
+  font-size: 18px;
+  padding: 10px 15px;
+  background: rgba(128, 123, 123, 0.2);
+  border-radius: 10px;
+  box-shadow: 0 25px 30px -30px rgba(0, 0, 0, 0.4);
+  margin-bottom: 25px;
+}
+
+.order-top,
+.order-products,
+.order-bot {
+  display: flex;
+  justify-content: space-between;
+}
+
+.order-top {
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(129, 125, 125, 0.2);
+}
+
+.order-status {
+  color: #888;
+  font-weight: 600;
+}
+
+.order-bot {
+  padding: 10px 0;
+  border-top: 1px solid rgba(129, 125, 125, 0.2);
+  align-items: center;
+}
+
+.order-mid {
+  margin: 0 40px;
+}
+
+.order-products {
+  padding: 10px 0;
+  font-size: 15px;
+}
+
+.order-products .order-img {
+  flex: .5;
+}
+
+.order-name {
+  flex: 2;
+  line-height: 1;
+  margin: 0 10px;
+}
+
+.order-quantity,
+.order-price {
+  flex: .5;
+  text-align: center;
+}
+
+.order-img img {
+  border-radius: 10px;
+  width: 100%;
+}
+
+.order-cancel {
+  font-size: 16px;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 10px;
+  background: rgba(255, 30, 30, 0.6);
+  outline: none;
+  border: none;
+  color: white;
+}
+
+.order-cancel:hover {
+  background: rgba(255, 30, 30, 1);
+}
+
+.order-receiver-address {
+  background: rgba(24, 172, 117, 0.6);
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 10px 15px ;
+  position: relative;
+  margin-left: 10px;
+}
+
+.order-receiver-address:hover,
+.order-receiver-address:focus{
+  background: rgba(24, 172, 117,1);
+}
+
+.consigneeDetail {
+  position: absolute;
+  bottom: 125%;
+  left: 0;
+  background: rgba(24, 172, 117, 0.9);
+  padding: 15px;
+  width: 300px;
+  min-height: 120px;
+  display: none;
+}
+
+.consigneeDetail::after {
+  content: 'hello';
+  width: 100%;
+  opacity: 0;
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+}
+
+.consigneeDetail header {
+  font-size: 20px;
+  font-weight: 600;
+  color: black;
+  border-bottom: 2px solid rgba(209, 209, 209, 0.8);
+}
+
+.consigneeDetail > div{
+  margin-top: 5px;
+}
+
+.order-total {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+#more { 
+  font-size: 18px;
+  font-weight: 600;
+  padding: 5px 20px;
+  margin: 0 auto;
+  outline: none;
+  cursor: pointer;
+  color: white;
+  border-radius: 5px;
+  border: 2px solid rgba(128, 123, 123, 0.2);
+  background: rgba(0, 0, 0,.5);
+  transition: .5s ease;
+  display: none;
+}
+
+#more:hover {
+  border: 2px solid rgba(0, 0, 0,.5);
+  /* color: rgba(0, 0, 0); */
+  background: rgba(0, 0, 0);
+}
+
+@media screen and (max-width: 1000px) {
+  ::-webkit-scrollbar {
+    width: 2px;
+  }
+
+  .list-orders {
+    overflow: auto;
+    min-height: 150px;
+    max-height: none;
+  }
+
+  .order {
+    font-size: 16px;
+    padding: 0 10px;
+    border-radius: 0;
+    box-shadow: none;
+
+  }
+
+  .my-orders-header {
+    margin: 0 10px 10px;
+  }
+
+  .order-mid {
+    margin: 10px 0;
+    overflow: hidden;
+    min-height: 200px;
+    max-height: none;
+  }
+
+  .order-bot {
+    flex-direction: column-reverse;
+  }
+
+  .order-products {
+    padding: 10px 0;
+    font-size: 15px;
+    flex-wrap: wrap;
+  }
+
+  .order-products .order-img {
+    flex: .4;
+    margin: 0 auto 10px;
+  }
+  
+  .order-name {
+    margin: 0 10px 10px;
+    flex: 100%;
+    text-align: center;
+  }
+  
+  .order-quantity,
+  .order-price {
+    text-align: center;
+  }
+
+  .notification header {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  
+  .notification a {
+    font-size: 14px;
+  }
+}
